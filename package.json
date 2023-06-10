@@ -1,0 +1,19 @@
+{
+  "name": "ostolex-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasilchenk23/ostolex-website.git"
+  },
+  "author": "let45",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vasilchenk23/ostolex-website/issues"
+  },
+  "homepage": "https://github.com/Vasilchenk23/ostolex-website#readme"
+}
