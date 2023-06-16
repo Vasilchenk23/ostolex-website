@@ -10,17 +10,28 @@
 </head>
 <body>
 
-<header id="Start">
-    <div class="logo">OSTOLEX</div>
-    <div class="menu">
-        <a href="#About">about</a>
-<!--        <a class="divider">/</a>-->
-        <a href="#Blog">blog</a>
-<!--        <a class="divider">/</a>-->
-<!--        <a href="#">contact us</a>-->
-    </div>
-</header>
-
+    <header id="Start">
+        <div class="logo">OSTOLEX</div>
+        <div class="menu">
+            <a href="#About">about</a>
+            <a href="#Blog">blog</a>
+        </div>
+    </header>
+    <nav class="Menu">
+        <div class="container">
+          <div class="Menu-burger__header">
+            <span></span>
+          </div>
+          <ul class="topMenu">
+            <li>
+              <ul class="subMenu">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Blog">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
 <div class="hero-section">
     <div class="row">
         <div class="col-sm-6">
@@ -280,6 +291,21 @@
                 articles[index].classList.add('active');
             });
         });
+let burger = document.querySelector('.Menu-burger__header'),
+menu = document.querySelector('.Menu');
+
+burger.addEventListener('click', function(e) {
+  menu.classList.toggle('active');
+});
+
+let menuLinks = document.querySelectorAll('.subMenu a');
+
+menuLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    menu.classList.remove('active');
+  });
+});
+
     </script>
 </body>
 </html>
