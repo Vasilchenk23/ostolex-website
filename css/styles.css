@@ -511,10 +511,10 @@ footer {
   margin: 3vw 10vw;
 }
 
-/* Медиа-запрос для мобильных устройств */
+
 @media only screen and (max-width: 768px) {
   footer {
-    margin: 2vw 3vw; /* Измените значения margin для адаптации под мобильные устройства */
+    margin: 2vw 3vw; 
   }
 }
 
