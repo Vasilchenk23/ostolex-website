@@ -1,3 +1,136 @@
+.Menu {
+  display: block;
+  width: 320px;
+  height: 400px;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #2E2F32;
+  position: fixed;
+  top: 0;
+  right: 0; 
+  transform: translateX(100%); 
+  transition: transform .3s ease-in;
+}
+
+.Menu.active {
+  transform: translateX(0);
+}
+
+.Menu .container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.Menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.Menu .Menu-burger__header {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  background: #333;
+  position: absolute;
+  right: calc(100% + 10px); 
+  top: 10px;
+  cursor: pointer;
+}
+
+
+
+.Menu .Menu-burger__header::before,
+.Menu .Menu-burger__header > span,
+.Menu .Menu-burger__header::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.Menu .Menu-burger__header::before {
+  top: calc(50% - 8px);
+  transform-origin: top;
+}
+
+.Menu .Menu-burger__header > span {
+  top: 50%;
+  transition-property: opacity;
+}
+
+.Menu .Menu-burger__header::after {
+  top: calc(50% + 8px);
+  transition-property: top, transform;
+}
+
+
+
+.Menu.active .Menu-burger__header::before {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.Menu.active .Menu-burger__header > span {
+  opacity: 0;
+}
+
+.Menu.active .Menu-burger__header::after {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+.Menu .topMenu {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.Menu .topMenu a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+.Menu .topMenu > li:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.Menu .topMenu > li > a {
+  font-weight: bold;
+}
+
+
+
+.Menu .topMenu .subMenu {
+  display: block;
+  padding-left: 1em;
+  margin-top: .5em;
+}
+
+.Menu .topMenu .subMenu > li:not(:last-child) {
+  margin-bottom: .5em;
+}
+
+.Menu a:hover {
+  color: #8DCFF6;
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
   background-color: #2E2F32;
@@ -9,6 +142,16 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 1vh 10vw;
+}
+@media (max-width: 700px) {
+  header .menu {
+    display: none;
+  }
+}
+@media (min-width: 701px) {
+  .Menu {
+    display: none;
+  }
 }
 
 .logo {
@@ -25,6 +168,7 @@ header {
   padding: 0;
   gap: 2vw;
 }
+
 
 .menu a {
   font-size: 2vw;
@@ -367,9 +511,21 @@ footer {
   margin: 3vw 10vw;
 }
 
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 768px) {
+  footer {
+    margin: 2vw 3vw; /* Измените значения margin для адаптации под мобильные устройства */
+  }
+}
+
 .logo a{
   color: #FFFFFF;
   text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  .logo {
+   font-size: 20px;
+  }
 }
 
 
