@@ -27,8 +27,6 @@
   list-style: none;
 }
 
-
-
 .Menu .Menu-burger__header {
   width: 30px;
   height: 30px;
@@ -39,8 +37,6 @@
   top: 10px;
   cursor: pointer;
 }
-
-
 
 .Menu .Menu-burger__header::before,
 .Menu .Menu-burger__header > span,
@@ -73,8 +69,6 @@
   transition-property: top, transform;
 }
 
-
-
 .Menu.active .Menu-burger__header::before {
   top: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -88,8 +82,6 @@
   top: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-
 
 .Menu .topMenu {
   display: block;
@@ -114,8 +106,6 @@
 .Menu .topMenu > li > a {
   font-weight: bold;
 }
-
-
 
 .Menu .topMenu .subMenu {
   display: block;
@@ -168,7 +158,6 @@ header {
   padding: 0;
   gap: 2vw;
 }
-
 
 .menu a {
   font-size: 2vw;
