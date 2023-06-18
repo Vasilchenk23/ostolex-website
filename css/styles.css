@@ -1,15 +1,17 @@
 .Menu {
-  display: block;
-  width: 320px;
-  height: 400px;
+  display: inline-block;
+  min-width: 120px;
+  min-height: 100px;
   font-family: 'Orbitron', sans-serif;
   background-color: #2E2F32;
   position: fixed;
   top: 0;
-  right: 0; 
-  transform: translateX(100%); 
+  right: 0;
+  transform: translateX(100%);
   transition: transform .3s ease-in;
+  z-index: 1;
 }
+
 
 .Menu.active {
   transform: translateX(0);
@@ -46,7 +48,7 @@
   width: 20px;
   height: 2px;
   border-radius: 2px;
-  background: #fff;
+  background:#8DCFF6 ;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
